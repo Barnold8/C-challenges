@@ -1,5 +1,12 @@
 #pragma once
 
+namespace test {
+
+	int add(int x, int y);
+
+
+}
+
 
 namespace MyConstants {
 
