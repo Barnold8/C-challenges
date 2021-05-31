@@ -71,21 +71,7 @@ int pow(int num, int power) { //basic power function
 
 }
 
-void printFAST8(int_fast8_t printable) {
 
-	const int_fast8_t MAX_size = INT_FAST8_MAX;
-	const int_fast8_t MIN_size = -MAX_size;
-
-	//std::cout << unsigned(INT_FAST8_MAX) << std::endl;
-
-	//if (printable > MAX_size || printable < MIN_size) {
-	
-	//}
-	//else {std::cout << unsigned(printable) << std::endl;
-	//}
-
-	std::cout << "OVERFLOW OF int_fast8_t datatype" << std::endl;
-}
 
 int SciNotation(int number, int exponent) {
 
@@ -99,15 +85,10 @@ double SciNotation(double number, double exponent) {
 
 }
 
-//
-//void printNodes(Node* n) {
-//
-//
-//	while (n != NULL) {
-//	
-//		std::cout << n->value << std::endl;
-//		n = n->next;
-//	}
-//
-//
-//}
+static void PrintLol() { //static keyword provides internal linkage for function to stop if being called out of file.
+
+	std::cout << "LOL" << std::endl;
+
+}
+
+extern int g_test_int{ 100 }; //To show that extern linkage is possible with variables since their linkage by default is internal
