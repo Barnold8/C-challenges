@@ -36,3 +36,5 @@ struct Node {
 };
 
 //void printNodes(Node* n);
+
+static void PrintLol();
