@@ -37,4 +37,11 @@ struct Node {
 
 //void printNodes(Node* n);
 
+
+int sumTo(int value);
+
+char* returnAlphabet();
+
+
+
 static void PrintLol();
