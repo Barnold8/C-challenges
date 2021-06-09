@@ -85,10 +85,41 @@ double SciNotation(double number, double exponent) {
 
 }
 
-static void PrintLol() { //static keyword provides internal linkage for function to stop if being called out of file.
+static void PrintLol() {
 
 	std::cout << "LOL" << std::endl;
 
 }
 
-extern int g_test_int{ 100 }; //To show that extern linkage is possible with variables since their linkage by default is internal
+
+int sumTo(int value) {
+
+	int x{ 0 };
+
+	for (int i{ 0 }; i <= value; ++i) {
+
+		x += i;
+
+	}
+	return x;
+
+}
+
+
+char* returnAlphabet() {
+
+	char alpha[26]{};
+
+	for (char a{ 'a' }; a <= 'z'; ++a) {
+
+										
+		alpha[static_cast<int>(a) - 97] = a;
+
+	}
+
+	return alpha;
+
+
+}
+
+extern int g_test_int{ 100 };
