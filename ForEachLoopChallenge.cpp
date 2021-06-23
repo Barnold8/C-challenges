@@ -25,7 +25,7 @@ int main()
 	std::string names[8]{ "Alex", "Betty", "Caroline", "Dave", "Emily", "Fred", "Greg", "Holly" };
 	std::string name{};
 	std::cout << "Please enter a name: \t";
-	std::cin >> name;
+	std::cin >> name; // Didnt use cin.getline here because I dont need any data after the space
 	std::cin.ignore();// cin stuff to clear cin buffer ect
 	std::cin.clear();
 
