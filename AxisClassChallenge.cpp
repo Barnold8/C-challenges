@@ -73,7 +73,7 @@ public:
 	
 	}
 
-	bool isEqual(const Point3d& obj) {
+	bool isEqual(const Point3d& obj) {// b
 	
 		if (m_x == obj.m_x && m_y == obj.m_y && m_z == obj.m_z) {
 			
