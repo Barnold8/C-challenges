@@ -3,10 +3,6 @@
 #include "MyHeader.h"
 #include <string>
 
-int add(int x, int y)
-{
-	return x + y;
-}
 
 void printINT(int var) {
 
@@ -92,29 +88,26 @@ static void PrintLol() {
 }
 
 
-int sumTo(int value) {
-
-	int x{ 0 };
-
-	for (int i{ 0 }; i <= value; ++i) {
-
-		x += i;
-
-	}
-	return x;
-
-}
+//int sumTo(int value) {
+//
+//	int x{ 0 };
+//
+//	for (int i{ 0 }; i <= value; ++i) {
+//
+//		x += i;
+//
+//	}
+//	return x;
+//
+//}
 
 
 char* returnAlphabet() {
 
 	char alpha[26]{};
 
-	for (char a{ 'a' }; a <= 'z'; ++a) {
-
-										
+	for (char a{ 'a' }; a <= 'z'; ++a) {							
 		alpha[static_cast<int>(a) - 97] = a;
-
 	}
 
 	return alpha;
@@ -122,4 +115,65 @@ char* returnAlphabet() {
 
 }
 
+void printCharArray(char* c) {
+
+	int count{ 0 };
+	while (c[count] != '\0') {
+
+		std::cout << c[count];
+		++count;
+	}
+
+}
+
+std::string getString() {
+
+	std::string tempString{};
+
+	std::cout << "Please enter a string:\t";
+	std::getline(std::cin, tempString);
+
+	if (std::cin.fail()) {
+
+		std::cin.clear();
+		std::cin.ignore();
+		std::cout << "Error at input" << std::endl;
+	}
+	else {
+
+		return tempString;
+	}
+
+
+}
+
+
+void HowManySpaces(std::string s) {
+	int count{};
+	for (int i{}; i < s.length(); ++i) {
+
+		if (s[i] == ' ') {
+			++count;
+		}
+
+	}
+	std::cout << "There is " << count << " amount of spaces!!" << std::endl;
+}
+
 extern int g_test_int{ 100 };
+
+Date::Date(const int& d, const int& m, const int& y) : m_day{ d }, m_month{ m }, m_year{y} {}
+
+void Date::setDate(const int& d, const int& m, const int& y) {
+
+	m_day = d;
+	m_month = m;
+	m_year = y;
+
+}
+
+void Date::printDate() {
+
+	std::cout << m_day << "/" << m_month << "/" << m_year << std::endl;
+
+}
